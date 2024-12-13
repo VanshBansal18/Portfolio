@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vansh Bansal - Portfolio</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            background-image: url('https://i.pinimg.com/474x/c7/d9/85/c7d9850bdbc1ae385ebe8fe1f80f9571.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            color: #333;
+            font-weight: bold;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #66BB6A, #388E3C);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h2 {
+            font-size: 3rem;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #388E3C;
+            transform: scale(1.1);
+        }
+
+        /* Profile Picture Section */
+        #mypicture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin-top: -70px; /* Moves image up */
+            margin-bottom: 50px;
+        }
+
+        #mypicture img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #66BB6A;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #mypicture img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        #mypicture p {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            color: #4CAF50;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 30px;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 1000px;
+            background-color: rgba(255, 255, 255, 0.85); /* Slight transparency for better background image effect */
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        section p, section ul {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+        }
+
+        ul li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #66BB6A;
+            font-size: 1.2rem;
+        }
+
+        /* Hover Effects on Section */
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Contact Section */
+        #contact ul li {
+            font-size: 1.1rem;
+        }
+
+        #contact ul li a {
+            color: #388E3C;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact ul li a:hover {
+            color: #66BB6A;
+        }
+
+        /* Form Styling */
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #388E3C;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #66BB6A;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header h2 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-bottom: 15px;
+            }
+
+            section {
+                width: 90%;
+            }
+        }
+
+        /* Animations for Scroll */
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2><b><u>Vansh Bansal</u></b></h2>
+        <nav>
+            <ul>
+                <li><a href="#aboutme" aria-label="Go to About Me section">About Me</a></li>
+                <li><a href="#skills" aria-label="Go to Skills section">Skills</a></li>
+                <li><a href="#education" aria-label="Go to Education section">Education</a></li>
+                <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Profile Picture Section at the Top -->
+        <section id="mypicture">
+            <img src="image.jpg">
+            <p>Welcome to my Portfolio! I am Vansh Bansal</p>
+        </section>
+
+        <section id="aboutme">
+            <h1>About Me</h1>
+            <p><b>I am Vansh, a first-year student at KIET Ghaziabad, pursuing a B.Tech in Computer Science and Engineering.I have a passion for learning new skills and am always excited for new opportunities.</b></p>
+        </section>
+
+        <section id="skills">
+            <h1>Skills</h1>
+            <ul>
+                <li><b>Video Editing (Basic)</b></li>
+                <li><b>C Programming</b></li>
+                <li><b>HTML</b></li>
+                <li><b>CSS</b></li>
+                <li><b>Good Communication Skills</b></li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h1>Education</h1>
+            <ul>
+                <li><b>I completed my 10th and 12th grade at Vedanta Global Senior Secondary School.</b></li>
+                <li><b>I am currently pursuing a B.Tech in Computer Science at KIET, Ghaziabad.</b></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Details</h1>
+            <ul>
+                <li><b>Vansh Bansal</b></li>
+                <li><b>Phone:</b> +91 9719729264</li>
+                <li><b>Email:</b> <a href="mailto:vanshbansal18may@gmail.com">vanshbansal18may@gmail.com</a></li>
+            </ul>
+            <hr>
+            <h1>Contact Form</h1>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p style="text-align: center; padding: 20px;">
+            &copy; 2024 Vansh Bansal - All Rights Reserved<br>
+            <a href="https://github.com/VanshBansal18" target="_blank">github</a> |
+            <a href="https://www.linkedin.com/in/vansh-bansal-607700328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
